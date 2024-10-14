@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'apikey.dart';
 import 'player_detail_screen.dart';
 
 class PlayersScreen extends StatefulWidget {
@@ -24,7 +25,7 @@ class _PlayersScreenState extends State<PlayersScreen> {
     try {
       final response = await http.get(
         Uri.parse('https://v3.football.api-sports.io/players/profiles'),
-        headers: {'x-apisports-key': 'c1416826b14cb86938a74890fde156fd',},
+        headers: {'x-apisports-key': apiKey1},
         
       );
 

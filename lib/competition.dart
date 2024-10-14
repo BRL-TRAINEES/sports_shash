@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'apikey.dart';
+
 class Competition extends StatefulWidget {
   @override
   _CompetitionState createState() => _CompetitionState();
@@ -22,7 +24,7 @@ class _CompetitionState extends State<Competition> {
     final response = await http.get(
       Uri.parse('http://api.football-data.org/v4/competitions'),
       headers: {
-        'X-Auth-Token': '261f345f1716447cae3b21de6e327cab', 
+        'X-Auth-Token': apiKey2, 
       },
     );
 
@@ -71,14 +73,14 @@ class _CompetitionState extends State<Competition> {
           ),
           Expanded(
             child: filteredCompetitions.isEmpty
-                ? Center(child: CircularProgressIndicator()) // Show loading indicator
+                ? Center(child: CircularProgressIndicator()) 
                 : ListView.builder(
                     itemCount: filteredCompetitions.length,
                     itemBuilder: (context, index) {
                       return ListTile(
-                        title: Text(filteredCompetitions[index]['name']), // Display competition name
+                        title: Text(filteredCompetitions[index]['name']), 
                         onTap: () {
-                          // Navigate to competition details
+                        
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -99,7 +101,7 @@ class _CompetitionState extends State<Competition> {
 }
 
 class CompetitionDetail extends StatelessWidget {
-  final dynamic competition; // Accept competition data
+  final dynamic competition;
 
   CompetitionDetail({required this.competition});
 
@@ -160,7 +162,7 @@ class CompetitionDetail extends StatelessWidget {
                 height: 100,
               ),
             SizedBox(height: 20),
-            // You can add more details here as needed
+          
           ],
         ),
       ),
