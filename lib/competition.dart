@@ -62,7 +62,7 @@ class _CompetitionState extends State<Competition> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
-              onChanged: _filterCompetitions, // Call filter function on input change
+              onChanged: _filterCompetitions, 
               decoration: InputDecoration(
                 labelText: 'Search',
                 border: OutlineInputBorder(),
