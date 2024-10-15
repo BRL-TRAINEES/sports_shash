@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'competition.dart';
 import 'homepage.dart';
-import 'players_screen.dart';
 
 void main() {
   runApp(MyApp());
