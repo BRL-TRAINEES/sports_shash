@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:football_app/competition.dart';
-import 'package:football_app/players_screen.dart';
+import 'package:football_app/screens/competitions.dart';
+
+import 'players.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,12 +11,11 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Page'),
-        backgroundColor: Color.fromARGB(255, 161, 2, 2),
+        backgroundColor: Color.fromARGB(255, 212, 0, 0),
       ),
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
-        child: 
-        Center(
+        
           child:Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children:[
@@ -29,10 +29,9 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) =>PlayersScreen(),),);
                     },
                     child: Container(
-                      padding:  EdgeInsets.symmetric(vertical: 15, horizontal: 9),
-                      
-                      decoration: BoxDecoration( borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey,   ),
+                      padding: EdgeInsets.symmetric(vertical:15,horizontal:9),
+                      decoration: BoxDecoration( borderRadius: BorderRadius.circular(10),color:Color.fromARGB(255, 212, 0, 0),
+                          ),
                        
                    
                       child: Text(
@@ -48,9 +47,9 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => Competition(),),);
                     },
                     child: Container(
-                    padding:  EdgeInsets.symmetric(vertical:15,horizontal:9),
+                    padding:  EdgeInsets.symmetric(vertical:15,horizontal:11),
                       decoration: BoxDecoration(
-                        color: Colors.grey,
+                        color:  Color.fromARGB(255, 212, 0, 0),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child:  Text('Competitions', style: TextStyle(color: Colors.white, fontSize: 18),),
@@ -61,6 +60,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      
     );}}
  
