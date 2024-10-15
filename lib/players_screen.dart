@@ -73,8 +73,7 @@ class _PlayersScreenState extends State<PlayersScreen> {
         ),
       ),
       body: isLoading
-          ? Center(child: CircularProgressIndicator()): errorMessage.isNotEmpty ?
-               Center(child: Text(errorMessage))
+          ? Center(child: CircularProgressIndicator()): errorMessage.isNotEmpty ?Center(child: Text(errorMessage))
               : filteredPlayers.isEmpty
                   ? Center(child: Text('No players found.'))
                   : ListView.builder(
