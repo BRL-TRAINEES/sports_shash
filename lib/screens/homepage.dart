@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
                      color: const Color.fromARGB(96, 158, 158, 158),
                     borderRadius: BorderRadius.circular(30),
               ),
-              child: Text('      Compwtitons     ',style:TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold))
+              child: Text('      Competitons     ',style:TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold))
               )
               ),
               

@@ -60,7 +60,7 @@ backgroundColor:Colors.white,
           
         Padding(
           
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.all(8),
           child: TextField(
             onChanged: filterPlayers,
             decoration: InputDecoration(
@@ -80,14 +80,26 @@ backgroundColor:Colors.white,
                           itemBuilder: (context, index) {
                             final playerData = filteredPlayers[index];
                             final player = playerData['player']; 
-                            return ListTile(
+
+                             return Container
+                             (
+                                margin: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.grey),
+                                  borderRadius: BorderRadius.circular(10), // Rounded corners for border
+                                ),
+
+
+                            
+                            child:ListTile(
                               title: Text(player['name'] ,),
                               leading: player['photo'] != null? Image.network(player['photo'], width: 50, height: 50): null,
+                              
                               onTap: () {
                                 Navigator.push(context,MaterialPageRoute(builder: (context) => PlayerDetailScreen(player: player),
                                   ),
                                 ); 
-                              },
+                              },)
                             );
                           },
                         ),

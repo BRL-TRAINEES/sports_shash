@@ -23,7 +23,7 @@ class SScreen extends StatelessWidget {
              
               SizedBox(height: 20),
               Text(
-                'Welcome to Football App', style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.white, // Text color
+                'Launching Your App', style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.white, // Text color
                 ),
               ),
             ],

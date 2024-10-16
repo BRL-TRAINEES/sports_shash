@@ -61,6 +61,7 @@ class _CompetitionState extends State<Competition> {
               decoration: InputDecoration(
                 labelText: 'Search',
                 border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.search)
               ),),),
            
           Expanded(
@@ -68,6 +69,9 @@ class _CompetitionState extends State<Competition> {
                 : ListView.builder(
                     itemCount: filteredCompetitions.length,
                     itemBuilder: (context, index) {
+
+
+                    
                       return ListTile(
                         title: Text(filteredCompetitions[index]['name']),
                         onTap: () {
