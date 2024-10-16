@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:football_app/screens/lottie.dart';
-import 'screens/homepage.dart';
 
 void main() {
   runApp(MyApp());

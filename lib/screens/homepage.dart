@@ -27,9 +27,10 @@ class HomePage extends StatelessWidget {
                 onTap: () { Navigator.push(context,MaterialPageRoute(builder: (context) => PlayersScreen()),
                   );
                 },
-                child: Container(padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+                child: Container
+                (padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
                   decoration: BoxDecoration(
-                    color: Colors.grey,
+                    color: const Color.fromARGB(96, 158, 158, 158),
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Text('Football Players',style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
@@ -45,10 +46,10 @@ class HomePage extends StatelessWidget {
                 },
                 child: Container(padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
                   decoration: BoxDecoration(
-                    color: Colors.grey,
+                     color: const Color.fromARGB(96, 158, 158, 158),
                     borderRadius: BorderRadius.circular(30),
               ),
-              child: Text('Compititon',style:TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold))
+              child: Text('      Compwtitons     ',style:TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold))
               )
               ),
               

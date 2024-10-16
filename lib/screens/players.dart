@@ -51,13 +51,16 @@ class _PlayersScreenState extends State<PlayersScreen> {
   @override
 Widget build(BuildContext context) {
   return Scaffold(
-    backgroundColor:   Color.fromARGB(255, 255, 255, 255),
+backgroundColor:Colors.white,
     appBar: AppBar( title: Text('Football Players'),
     ),
     body: Column(
+    
       children: [
+          
         Padding(
-          padding: EdgeInsets.all(15),
+          
+          padding: EdgeInsets.all(20),
           child: TextField(
             onChanged: filterPlayers,
             decoration: InputDecoration(
@@ -67,9 +70,9 @@ Widget build(BuildContext context) {
             ),
           ),),
         Expanded(
-          child: isLoading? Center(child: CircularProgressIndicator(), 
-                ): errorMessage.isNotEmpty ? Center(child: Text(errorMessage),): 
-                filteredPlayers.isEmpty ? Center(child: Text('No players found.'), 
+          child: isLoading? Center(child: CircularProgressIndicator(), ): 
+                errorMessage.isNotEmpty ? Center(child: Text(errorMessage),): 
+                filteredPlayers.isEmpty ? Center(child: Text('No players found.',style: TextStyle(color: Colors.white,)), 
                   
                         ):
                        ListView.builder(
@@ -78,13 +81,10 @@ Widget build(BuildContext context) {
                             final playerData = filteredPlayers[index];
                             final player = playerData['player']; 
                             return ListTile(
-                              title: Text(player['name'] ),
+                              title: Text(player['name'] ,),
                               leading: player['photo'] != null? Image.network(player['photo'], width: 50, height: 50): null,
                               onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => PlayerDetailScreen(player: player),
+                                Navigator.push(context,MaterialPageRoute(builder: (context) => PlayerDetailScreen(player: player),
                                   ),
                                 ); 
                               },
