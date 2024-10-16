@@ -11,26 +11,29 @@ class PlayerDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(player['name']),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(24),
-       
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+      body: Container(
+        color: Colors.blueGrey,
+        padding: const EdgeInsets.all(13.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+          
             Image.network(player['photo'], width: 70, height: 70) ,
             SizedBox(height: 20),
-            Text('Name: ${player['name']}', style: TextStyle(fontSize: 20)),
+            Text('Name: ${player['name']}', style: TextStyle(fontSize: 20,color: Colors.white)),
             SizedBox(height: 8),
-            Text('Position: ${player['position']??'N/A'}',style:TextStyle(fontSize: 18)),
+            Text('Position: ${player['position']??'N/A'}',style:TextStyle(fontSize: 18,color: Colors.white)),
             SizedBox(height: 8),
-            Text('Nationality: ${player['nationality']??'N/A'}', style: TextStyle(fontSize: 18)),
+            Text('Nationality: ${player['nationality']??'N/A'}', style: TextStyle(fontSize: 18,color: Colors.white)),
             SizedBox(height: 8),
-            Text('Age:${player['age']?.toString()??'N/A'}',style: TextStyle(fontSize: 18)),
+            Text('Age:${player['age']?.toString()??'N/A'}',style: TextStyle(fontSize: 18,color: Colors.white)),
             SizedBox(height: 8),
-            
-          ],
-        ),
+        ],)
+        )
+          
       ),
-    );
+      );
+    
   }
 }

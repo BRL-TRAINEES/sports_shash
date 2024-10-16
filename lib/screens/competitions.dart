@@ -3,6 +3,8 @@ import 'package:football_app/screens/comdetails.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import '../apikey.dart';
+
 class Competition extends StatefulWidget {
   @override
   _CompetitionState createState() => _CompetitionState();
@@ -21,8 +23,8 @@ class _CompetitionState extends State<Competition> {
 
   Future<void> fetchCompetitions() async {
     final response = await http.get(
-      Uri.parse('http://api.football-data.org/v4/competitions'),headers:{'X-Auth-Token': '261f345f1716447cae3b21de6e327cab', 
-      },
+      Uri.parse('http://api.football-data.org/v4/competitions'),headers:{'X-Auth-Token': apiKey2  },
+     
     );
     final data = json.decode(response.body);
       setState(() {
@@ -53,6 +55,7 @@ class _CompetitionState extends State<Competition> {
         children: [
           Padding(
             padding: EdgeInsets.all(8.0),
+            
             child: TextField(
               onChanged: _filterCompetitions, 
               decoration: InputDecoration(
@@ -70,8 +73,6 @@ class _CompetitionState extends State<Competition> {
                         onTap: () {
                         Navigator.push(context,MaterialPageRoute(builder: (context)=>CompetitionDetail(competition: filteredCompetitions[index],))
                            
-                            
-                            
                           );
                         }, );
                      
