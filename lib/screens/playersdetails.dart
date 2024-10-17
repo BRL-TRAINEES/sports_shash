@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PlayerDetailScreen extends StatelessWidget {
-  final Map player;
+  final dynamic player;
 
   PlayerDetailScreen({required this.player});
 
