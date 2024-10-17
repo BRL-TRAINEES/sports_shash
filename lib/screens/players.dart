@@ -86,7 +86,7 @@ backgroundColor:Colors.white,
                                 margin: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
                                 decoration: BoxDecoration(
                                   border: Border.all(color: Colors.grey),
-                                  borderRadius: BorderRadius.circular(10), // Rounded corners for border
+                                  borderRadius: BorderRadius.circular(10), 
                                 ),
 
 
